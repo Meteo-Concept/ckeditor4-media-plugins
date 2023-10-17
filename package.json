@@ -1,0 +1,27 @@
+{
+  "name": "@meteo-concept/ckeditor4-media-plugins",
+  "version": "1.0.0",
+  "description": "Extra media insertion plugin for CKEditor4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meteo-Concept/ckeditor4-media-plugins.git"
+  },
+  "keywords": [
+    "CKEditor4",
+    "plugin",
+    "youtube",
+    "dailymotion",
+    "digiteka",
+    "twitter"
+  ],
+  "author": "Météo Concept",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Meteo-Concept/ckeditor4-media-plugins/issues"
+  },
+  "homepage": "https://github.com/Meteo-Concept/ckeditor4-media-plugins#readme"
+}
