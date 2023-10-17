@@ -1,7 +1,7 @@
 (function() {
     CKEDITOR.plugins.add( "twitter", {
         requires: "dialog,fakeobjects",
-        lang: "en",
+        lang: ["en", "fr"],
         icons: "twitter",
         init: function( editor ) {
             let pluginName = "twitter",

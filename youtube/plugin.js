@@ -1,7 +1,7 @@
 ( function() {
     CKEDITOR.plugins.add( "youtube", {
         requires: "dialog,fakeobjects",
-        lang: "en",
+        lang: ["en", "fr"],
         icons: "youtube",
         onLoad: function() {
             CKEDITOR.addCss( "div.youtube" +

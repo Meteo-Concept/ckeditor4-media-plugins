@@ -1,7 +1,7 @@
 ( function() {
     CKEDITOR.plugins.add( "dailymotion", {
         requires: "dialog,fakeobjects",
-        lang: "en",
+        lang: ["en", "fr"],
         icons: "dailymotion",
         onLoad: function() {
             CKEDITOR.addCss( "div.dailymotion" +

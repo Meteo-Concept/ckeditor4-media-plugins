@@ -1,7 +1,7 @@
 ( function() {
     CKEDITOR.plugins.add( "digiteka", {
         requires: "dialog,fakeobjects",
-        lang: "en",
+        lang: ["en", "fr"],
         icons: "digiteka",
         onLoad: function() {
             CKEDITOR.addCss( "div.digiteka" +
