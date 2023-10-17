@@ -29,24 +29,24 @@
                 data: function() {
                     const element = this.element;
                     element.setAttribute("data-twitter_url", this.data.twitter_url);
-                    let previousUrl = this.element.getAttribute("data-twitter_loaded_url");
+                    const previousUrl = this.element.getAttribute('data-twitter_loaded_url');
                     if (previousUrl !== this.data.twitter_url) {
-                        element.setAttribute("data-twitter_loaded_url", this.data.twitter_url);
+                        element.setAttribute('data-twitter_loaded_url', this.data.twitter_url);
                         if (this.data.twitter_url) {
-                            fetch("/tweet?url=" + encodeURI(this.data.twitter_url),
-                                { method: 'GET', cache: 'default' })
-                                .then(response => {
-                                    if (response.ok)
-                                        return response.json();
-                                    else
-                                        throw new Error(response.text());
-                                })
-                                .then(data => element.setHtml(data.html))
-                                .catch(error => element.setHtml(
+                            jQuery.ajax({
+                                url: 'https://publish.twitter.com/oembed?url=' + this.data.twitter_url,
+                                type: 'GET',
+                                dataType: 'jsonp',
+                            }).done(function (data) {
+                                element.setHtml(data.html);
+                            }).error(function (jqXHR, textStatus, errorThrown) {
+                                element.setHtml(
                                     "<div class=\"twitter\">" + lang.cannotLoadFrom +
                                         "<a href=\"" + this.data.twitter_url + "\">" + this.data.twitter_url + "</a>" +
                                     "</div>"
-                                ));
+                                );
+                                console.log("Loading the tweet failed with status: " + textStatus + " (" + errorThrown + ")");
+                            });
                         }
                     }
                 },
