@@ -47,7 +47,7 @@ the identifier is `8cfbX4MJdEc`. Dailymotion works similarly. For Digiteka, two
 other identifiers are necessary, one called "MDTK" and the other called "Zone".
 Presumably, you'll get them from Digiteka if you use their services. To avoid
 having to configure it for each video, you can add them to the editor
-configuration at the `extraConfig.digiteka.mdtk' and `extraConfig.digiteka.zone`
+configuration at the `extraConfig.digiteka.mdtk` and `extraConfig.digiteka.zone`
 paths. For Twitter/X, the plugin expects the entire URL of the tweet, for
 instance [https://twitter.com/meteoconcept/status/1636729535579279362](https://twitter.com/meteoconcept/status/1636729535579279362).
 Make sure to use `twitter.com` as the domain and not `x.com`, otherwise, it
