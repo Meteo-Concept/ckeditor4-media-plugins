@@ -1,6 +1,6 @@
 {
   "name": "@meteo-concept/ckeditor4-media-plugins",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extra media insertion plugin for CKEditor4",
   "main": "index.js",
   "scripts": {
